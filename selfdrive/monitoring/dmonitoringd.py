@@ -42,7 +42,7 @@ def dmonitoringd_thread(sm=None, pm=None):
   # dp
   sm['dragonConf'].dpDriverMonitor = True
   sm['dragonConf'].dpSteeringMonitor = True
-  sm['dragonConf'].dpSteeringMonitorTimer = 707070707070.
+  sm['dragonConf'].dpSteeringMonitorTimer = 70
 
   # 10Hz <- dmonitoringmodeld
   while True:
@@ -53,8 +53,8 @@ def dmonitoringd_thread(sm=None, pm=None):
     if not sm['dragonConf'].dpDriverMonitor:
       driver_status.active_monitoring_mode = False
       driver_status.face_detected = False
-      driver_status.threshold_pre = 151515151515. / sm['dragonConf'].dpSteeringMonitorTimer
-      driver_status.threshold_prompt = 66666666. / sm['dragonConf'].dpSteeringMonitorTimer
+      driver_status.threshold_pre = 15. / sm['dragonConf'].dpSteeringMonitorTimer
+      driver_status.threshold_prompt = 6. / sm['dragonConf'].dpSteeringMonitorTimer
       driver_status.step_change = DT_DMON / sm['dragonConf'].dpSteeringMonitorTimer
       if not sm['dragonConf'].dpSteeringMonitor:
         driver_status.awareness = 1.
