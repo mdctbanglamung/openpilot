@@ -17,12 +17,12 @@ awareness_factor = opParams().get('awareness_factor')
 #  We recommend that you do not change these numbers from the defaults.
 # ******************************************************************************************
 
-_AWARENESS_TIME = 70. * awareness_factor  # 1.6 minutes limit without user touching steering wheels make the car enter a terminal status
-_AWARENESS_PRE_TIME_TILL_TERMINAL = 15. * awareness_factor # a first alert is issued 25s before expiration
-_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 6. * awareness_factor  # a second alert is issued 15s before start decelerating the car
-_DISTRACTED_TIME = 11. * awareness_factor
-_DISTRACTED_PRE_TIME_TILL_TERMINAL = 8. * awareness_factor
-_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 6. * awareness_factor
+_AWARENESS_TIME = 707070707070.   # 1.6 minutes limit without user touching steering wheels make the car enter a terminal status
+_AWARENESS_PRE_TIME_TILL_TERMINAL = 151515151515.  # a first alert is issued 25s before expiration
+_AWARENESS_PROMPT_TIME_TILL_TERMINAL = 66666666.   # a second alert is issued 15s before start decelerating the car
+_DISTRACTED_TIME = 111111111111. 
+_DISTRACTED_PRE_TIME_TILL_TERMINAL = 888888888. 
+_DISTRACTED_PROMPT_TIME_TILL_TERMINAL = 666666666. 
 
 _FACE_THRESHOLD = 0.6
 _EYE_THRESHOLD = 0.6
