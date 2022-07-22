@@ -45,13 +45,13 @@ class LoggerThread(threading.Thread):
         self.logger.setLevel(logging.CRITICAL) # set to logging.DEBUG to enable logging
         # self.logger.setLevel(logging.DEBUG) # set to logging.CRITICAL to disable logging
 
-    def save_gps_data(self, gps, osm_way_id):
-        try:
-            location = [gps.speed, gps.bearing, gps.latitude, gps.longitude, gps.altitude, gps.accuracy, time.time(), osm_way_id]
-            with open("/data/gps-data", "a") as f:
-                f.write("{}\n".format(location))
-        except:
-            self.logger.error("Unable to write gps data to external file")
+   
+  
+     
+      
+     
+     
+     
 
     def run(self):
         pass # will be overridden in the child class
