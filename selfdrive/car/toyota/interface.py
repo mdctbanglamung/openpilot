@@ -327,16 +327,16 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.indi.actuatorEffectivenessV = [4.2, 5.8, 7.55, 9.3, 11.1, 12.9, 14.7, 15]
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
-      ret.longitudinalTuning.kpV = [0.4, 0.36, 0.325]  # braking tune from rav4h
-      ret.longitudinalTuning.kiV = [0.195, 0.10]
+      #ret.longitudinalTuning.kpV = [0.4, 0.36, 0.325]  # braking tune from rav4h
+      #ret.longitudinalTuning.kiV = [0.195, 0.10]
       
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
-      ret.longitudinalTuning.deadzoneV = [0., .14]
+      ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
-      #ret.longitudinalTuning.kpV = [1.3, 1.0, 0.7]
+      ret.longitudinalTuning.kpV = [1.3, 1.0, 0.7]
       
       ret.longitudinalTuning.kiBP = [0., 5., 12., 20., 27.] # 0, 11, 27, 45, 60
-      #ret.longitudinalTuning.kiV = [.35, .23, .20, .17, .1]
+      ret.longitudinalTuning.kiV = [.35, .23, .20, .17, .1]
       ret.stoppingBrakeRate = 0.16 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
       ret.startAccel = 1.4 # Accelerate from 0 faster
@@ -348,7 +348,7 @@ class CarInterface(CarInterfaceBase):
       ret.mass = 3060. * CV.LB_TO_KG + STD_CARGO_KG
       ret.steerActuatorDelay = 0.48
       ret.steerLimitTimer = 5.0
-      ret.wheelSpeedFactor = 1.075
+      ret.wheelSpeedFactor = 1.05
       if spairrowtuning:
         ret.lateralTuning.init('indi')
         ret.lateralTuning.indi.innerLoopGainBP = [18, 22, 26]
