@@ -335,7 +335,7 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.kiV = [.35, .23, .20, .17, .1]
       ret.stoppingBrakeRate = 0.16 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
-      ret.startAccel = 1.4 # Accelerate from 0 faster
+      ret.startAccel = 1.30 # Accelerate from 0 faster
       stop_and_go = True
       ret.safetyParam = 73
       ret.wheelbase = 2.7
