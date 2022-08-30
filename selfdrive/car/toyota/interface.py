@@ -336,12 +336,11 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
       ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
-      ret.longitudinalTuning.kpV = [1.3, 1.0, 0.7]
+      ret.longitudinalTuning.kpV = [0.4, 0.36, 0.325]
       ret.longitudinalTuning.kiBP = [0., 5., 12., 20., 27.] # 0, 11, 27, 45, 60
-      ret.longitudinalTuning.kiV = [.35, .23, .20, .17, .1]
+      ret.longitudinalTuning.kiV = [0.195, 0.10]
       ret.stoppingBrakeRate = 0.16 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
-      ret.startAccel = 1.30 # Accelerate from 0 fasterret.steerActuatorDelay = 0.48
       ret.steerActuatorDelay = 0.48
       ret.steerLimitTimer = 5.0
       if spairrowtuning:
@@ -354,7 +353,7 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.timeConstantV = [1, 3, 4.5]
         ret.lateralTuning.indi.actuatorEffectivenessBP = [18, 22, 26]
         ret.lateralTuning.indi.actuatorEffectivenessV = [9, 12, 15]
-        ret.steerActuatorDelay = 0.38
+        ret.steerActuatorDelay = 0.42 - 0.2
       else:
         ret.lateralTuning.pid.kpBP = [0.0]
         ret.lateralTuning.pid.kiBP = [0.0]
