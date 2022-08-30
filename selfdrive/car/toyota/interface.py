@@ -327,6 +327,13 @@ class CarInterface(CarInterfaceBase):
       ret.lateralTuning.indi.actuatorEffectivenessV = [4.2, 5.8, 7.55, 9.3, 11.1, 12.9, 14.7, 15]
 
     elif candidate in [CAR.COROLLA_TSS2, CAR.COROLLAH_TSS2]:
+
+      stop_and_go = True
+      ret.safetyParam = 73
+      ret.wheelbase = 2.7
+      ret.steerRatio = 13.9
+      tire_stiffness_factor = 0.444  # not optimized yet
+      ret.mass = 3060. * CV.LB_TO_KG + STD_CARGO_KG
       ret.longitudinalTuning.deadzoneBP = [0., 8.05]
       ret.longitudinalTuning.deadzoneV = [.0, .14]
       ret.longitudinalTuning.kpBP = [0., 5., 20.]
@@ -335,14 +342,7 @@ class CarInterface(CarInterfaceBase):
       ret.longitudinalTuning.kiV = [.35, .23, .20, .17, .1]
       ret.stoppingBrakeRate = 0.16 # reach stopping target smoothly
       ret.startingBrakeRate = 0.9 # release brakes fast
-      ret.startAccel = 1.30 # Accelerate from 0 faster
-      stop_and_go = True
-      ret.safetyParam = 73
-      ret.wheelbase = 2.7
-      ret.steerRatio = 13.9
-      tire_stiffness_factor = 0.444  # not optimized yet
-      ret.mass = 3060. * CV.LB_TO_KG + STD_CARGO_KG
-      ret.steerActuatorDelay = 0.48
+      ret.startAccel = 1.30 # Accelerate from 0 fasterret.steerActuatorDelay = 0.48
       ret.steerLimitTimer = 5.0
       if spairrowtuning:
         ret.lateralTuning.init('indi')
@@ -354,12 +354,12 @@ class CarInterface(CarInterfaceBase):
         ret.lateralTuning.indi.timeConstantV = [1, 3, 4.5]
         ret.lateralTuning.indi.actuatorEffectivenessBP = [18, 22, 26]
         ret.lateralTuning.indi.actuatorEffectivenessV = [9, 12, 15]
-        ret.steerActuatorDelay = 0.39
+        ret.steerActuatorDelay = 0.38
       else:
         ret.lateralTuning.pid.kpBP = [0.0]
         ret.lateralTuning.pid.kiBP = [0.0]
-        ret.lateralTuning.pid.kpV = [0.036]
-        ret.lateralTuning.pid.kiV = [0.0012]
+        ret.lateralTuning.pid.kpV = [0.037]
+        ret.lateralTuning.pid.kiV = [0.0013]
         ret.lateralTuning.pid.kf = 0.000153263811757641
         ret.lateralTuning.pid.newKfTuned = True
 
